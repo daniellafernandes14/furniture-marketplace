@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  start_date: 2022-02-20 14:26:35
+  end_date: 2022-02-20 14:26:35
+  user: one
+  product: one
+
+two:
+  start_date: 2022-02-20 14:26:35
+  end_date: 2022-02-20 14:26:35
+  user: two
+  product: two
