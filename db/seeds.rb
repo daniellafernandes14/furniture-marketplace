@@ -48,7 +48,7 @@ attach_photo(table, 'https://cdn.shopify.com/s/files/1/3004/4124/products/71y7yC
 
 lamp = Product.new( name: 'Lamp',
                     category: 'Lighting',
-                    colour: 'Yello',
+                    colour: 'Yellow',
                     material: 'Glass',
                     user: derrick)
 attach_photo(lamp, 'https://www.iconiclights.co.uk/media/catalog/product/cache/e2f58982b83e61e3558a98d5d4d0ed56/b/2/b2773_c.jpg')

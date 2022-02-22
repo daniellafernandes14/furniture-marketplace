@@ -3,10 +3,9 @@ class ProductsController < ApplicationController
     @products = Product.all
 
     filters = params.dig(:filters, :category)
-      if filters.present? && filters.reject(&:empty?).present?
-        @products = @products.where(category: filters)
-      end
-
+    if filters.present? && filters.reject(&:empty?).present?
+      @products = @products.where(category: filters)
+    end
   end
 
   def show
