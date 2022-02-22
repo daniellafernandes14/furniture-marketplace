@@ -1,6 +1,12 @@
 class ProductsController < ApplicationController
   def index
     @products = Product.all
+
+    filters = params.dig(:filters, :category)
+      if filters.present? && filters.reject(&:empty?).present?
+        @products = @products.where(category: filters)
+      end
+
   end
 
   def show
