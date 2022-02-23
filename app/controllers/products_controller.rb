@@ -1,6 +1,21 @@
 class ProductsController < ApplicationController
   def index
-    @products = Product.all
+    # @products = Product.all
+
+    # if params[:search_query].nil?
+    #   session[:search] = params.dig(:search, :query)
+    #   # .dig is the value of the nested elements in the parantheses.
+    #   # so in this case will be the value of the query
+    #   if params[:search_query] == "" || params[:search_query].nil?
+    #     @products = Product.all
+    #   else
+    #     @products = Product.where("name ILIKE ? or colour ILIKE ? or category ILIKE ? or material ILIKE ?",
+    #                         "%#{session[:search]}%", "%#{session[:search]}%", "%#{session[:search]}%", "%#{session[:search]}%")
+    #   end
+    # else
+      @products = Product.where("name ILIKE ? or colour ILIKE ? or category ILIKE ? or material ILIKE ?",
+                            "%#{params[:search_query]}%", "%#{params[:search_query]}%", "%#{params[:search_query]}%", "%#{params[:search_query]}%")
+    # end
 
     filters = params.dig(:filters, :category)
     if filters.present? && filters.reject(&:empty?).present?
