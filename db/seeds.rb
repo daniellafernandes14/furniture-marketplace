@@ -34,7 +34,8 @@ armchair = Product.new( name: 'Armchair',
                         category: 'Lounging',
                         colour: 'White',
                         material: 'Cotton',
-                        user: laurel)
+                        user: laurel,
+                        address: '16 Villa Gaudelet, Paris')
 attach_photo(armchair, 'https://cdn.shopify.com/s/files/1/3004/4124/products/b1efaecc-6582-423b-9b81-2dce84b2eb8a.png?v=1621982343')
 attach_photo(armchair, 'https://cdn.shopify.com/s/files/1/3004/4124/products/LizzieChair-_welcometo_no50_2000x2000.png?v=1625070926')
 
@@ -42,7 +43,8 @@ table = Product.new(name: 'Table',
                     category: 'Dining',
                     colour: 'Brown',
                     material: 'Wooden',
-                    user: laurel)
+                    user: laurel,
+                    address: '18 Althorpe Mews, London')
 attach_photo(table, 'https://cdn.shopify.com/s/files/1/3004/4124/products/b7a23b45-b72c-4636-957b-a40204ffbeca.png?v=1617969443')
 attach_photo(table, 'https://cdn.shopify.com/s/files/1/3004/4124/products/71y7yCVEM_2BL._AC_SL1500_2000x2000.jpg?v=1617969443')
 
@@ -50,7 +52,8 @@ lamp = Product.new( name: 'Lamp',
                     category: 'Lighting',
                     colour: 'Yellow',
                     material: 'Glass',
-                    user: derrick)
+                    user: derrick,
+                    address: '18 Althorpe Mews, London')
 attach_photo(lamp, 'https://www.iconiclights.co.uk/media/catalog/product/cache/e2f58982b83e61e3558a98d5d4d0ed56/b/2/b2773_c.jpg')
 attach_photo(lamp, 'https://www.iconiclights.co.uk/media/catalog/product/cache/e2f58982b83e61e3558a98d5d4d0ed56/b/2/b2773.jpg')
 
