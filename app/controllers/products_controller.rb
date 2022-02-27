@@ -21,6 +21,13 @@ class ProductsController < ApplicationController
     if filters.present? && filters.reject(&:empty?).present?
       @products = @products.where(category: filters)
     end
+
+    @markers = @products.geocoded.map do |product|
+      {
+        lat: product.latitude,
+        lng: product.longitude
+      }
+    end
   end
 
   def show

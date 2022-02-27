@@ -13,4 +13,5 @@
  *= require_tree .
  *= require_self
  */
-@import 'components/searchbar'
+@import 'components/searchbar';
+@import "mapbox-gl/dist/mapbox-gl";
