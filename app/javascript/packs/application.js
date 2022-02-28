@@ -8,7 +8,8 @@ import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 import { listenForClearClick } from './reset';
-
+import '../controllers'
+// import 'bootstrap'
 
 Rails.start()
 Turbolinks.start()

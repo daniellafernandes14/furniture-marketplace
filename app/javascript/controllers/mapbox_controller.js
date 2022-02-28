@@ -1,5 +1,5 @@
-import { Controller } from "@hotwired/stimulus"
-import mapboxgl from "mapbox-gl"
+import { Controller } from "stimulus"
+import mapboxgl from "!mapbox-gl"
 
 export default class extends Controller {
   static values = {
@@ -9,7 +9,7 @@ export default class extends Controller {
 
   connect() {
     mapboxgl.accessToken = this.apiKeyValue
-
+    console.log('Hello')
     this.map = new mapboxgl.Map({
       container: this.element,
       style: "mapbox://styles/mapbox/streets-v10",

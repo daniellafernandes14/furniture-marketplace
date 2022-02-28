@@ -8,7 +8,6 @@ const toggle = () => {
 
 const listenForClearClick = () => {
   const clear = document.getElementById('clear-filters');
-  console.log("im working");
   clear.addEventListener("click", (e) => {
     console.log(e);
     toggle();
