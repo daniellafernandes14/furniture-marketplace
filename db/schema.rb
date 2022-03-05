@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_05_133031) do
+ActiveRecord::Schema.define(version: 2022_03_05_144443) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -58,6 +58,10 @@ ActiveRecord::Schema.define(version: 2022_03_05_133031) do
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "owner_id", null: false
+    t.bigint "invitee_id", null: false
+    t.index ["invitee_id"], name: "index_chatrooms_on_invitee_id"
+    t.index ["owner_id"], name: "index_chatrooms_on_owner_id"
   end
 
   create_table "messages", force: :cascade do |t|
@@ -101,6 +105,8 @@ ActiveRecord::Schema.define(version: 2022_03_05_133031) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "bookings", "products"
   add_foreign_key "bookings", "users"
+  add_foreign_key "chatrooms", "users", column: "invitee_id"
+  add_foreign_key "chatrooms", "users", column: "owner_id"
   add_foreign_key "messages", "chatrooms"
   add_foreign_key "messages", "users"
   add_foreign_key "products", "users"

@@ -13,7 +13,7 @@
     <% end %>
   </div>
 
-  <%= simple_form_for [@chatroom, @message],
+  <%= simple_form_for [@chatroom, @messages],
     remote: true,
     html: {class: "d-flex"} do |f| %>
     <%= f.input :content,
